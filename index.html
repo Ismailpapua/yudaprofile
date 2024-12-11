@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PORTFOLIO</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PORTFOLIO</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       rel="stylesheet"
@@ -22,19 +22,27 @@
       h5,
       h6 {
         font-family: "Montserrat", sans-serif;
+        transition: all 0.3s ease;
       }
 
       .w3-row-padding img {
         margin-bottom: 12px;
+        transition: transform 0.3s ease;
       }
 
       .w3-sidebar {
         width: 120px;
         background: #222;
+        transition: width 0.3s ease;
+      }
+
+      .w3-sidebar:hover {
+        width: 180px;
       }
 
       #main {
         margin-left: 120px;
+        transition: margin-left 0.3s ease;
       }
 
       @media only screen and (max-width: 600px) {
@@ -42,19 +50,61 @@
           margin-left: 0;
         }
       }
+
       html {
         scroll-behavior: smooth;
+      }
+
+      .w3-button {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .w3-button:hover {
+        background-color: #555;
+        transform: scale(1.05);
+      }
+
+      .w3-bar-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .w3-bar-item:hover {
+        background-color: #444;
+      }
+
+      .w3-jumbo {
+        animation: fadeIn 1.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .w3-content img {
+        transition: transform 0.3s ease;
+      }
+
+      .w3-content img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hover effect for pricing */
+      .w3-ul li:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+        transition: transform 0.3s ease, background-color 0.3s ease;
       }
     </style>
   </head>
 
   <body class="w3-black">
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-      <img
-        src="img/yuda rpl.png"
-        alt="yuda rpl"
-        style="width: 100%"
-      />
+      <img src="img/yuda rpl.png" alt="yuda rpl" style="width: 100%" />
 
       <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
         <i class="fa fa-home w3-xxlarge"></i>
@@ -114,14 +164,11 @@
     <div class="w3-padding-large" id="main">
       <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
         <h1 class="w3-jumbo">
-          <span class="w3-hide-small">Shaloom Jousuba
+          <span class="w3-hide-small">Shaloom Jousuba</span>
         </h1>
         <h2><span>Saya YEHUDA MSIREN</span></h2>
         <p>Web Designer & UI Specialist.</p>
-        <img
-          src="img/PROFIL YEHUDA.png"
-          style="width: 45%"
-        />
+        <img src="img/PROFIL YEHUDA.png" style="width: 45%" />
       </header>
 
       <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -135,20 +182,7 @@
           capturing nature's beauty and special moments. Always eager to grow
           and explore new interests!
         </p>
-        <p>
-          Saya Yehuda Msiren, seorang siswa Kelas X jurusan Rekayasa Perangkat
-          Lunak di SMKS YPK 1 Pariwisata Biak, merupakan web designer dan
-          programmer muda berbakat yang berkomitmen untuk menciptakan inovasi
-          digital yang kreatif dan fungsional.
-        </p>
-        <p>
-          Jehuda Olief Msiren, siswa berusia 15 tahun dari SMKS YPK 1
-          Pariwisata, adalah seorang pemula berbakat di bidang Frontend dan
-          Rekayasa Perangkat Lunak. Dengan minat yang mendalam dalam
-          pengembangan antarmuka pengguna, Jehuda memiliki potensi besar untuk
-          berkembang sebagai seorang profesional di dunia teknologi dan desain
-          digital.
-        </p>
+
         <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
         <p class="w3-wide">User Interface</p>
         <div class="w3-white">
@@ -161,26 +195,6 @@
         <p class="w3-wide">Photoshop</p>
         <div class="w3-white">
           <div class="w3-dark-grey" style="height: 28px; width: 80%"></div>
-        </div>
-        <br />
-
-        <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">3+</span><br />
-            Partners
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">15+</span><br />
-            Projects Done
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">120+</span><br />
-            Happy Clients
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">150+</span><br />
-            Meetings
-          </div>
         </div>
 
         <button class="w3-button w3-light-grey w3-padding-large w3-section">
@@ -237,60 +251,29 @@
         </div>
       </div>
 
-      <!-- Portfolio Section -->
       <div class="w3-padding-64 w3-content" id="photos">
         <h2 class="w3-text-light-grey">Bukti Karya</h2>
         <hr style="width: 200px" class="w3-opacity" />
-
-        <!-- Grid for photos -->
         <div class="w3-row-padding" style="margin: 0 -16px">
           <div class="w3-half">
-            <img
-              src="img/desain web 1.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 2.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 3.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 8.png"
-              style="width: 100%"
-            />
+            <img src="img/desain web 1.png" style="width: 100%" />
+            <img src="img/desain web 2.png" style="width: 100%" />
+            <img src="img/desain web 3.png" style="width: 100%" />
+            <img src="img/desain web 8.png" style="width: 100%" />
           </div>
 
           <div class="w3-half">
-            <img
-              src="img/desain web 4.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 5.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 6.png"
-              style="width: 100%"
-            />
-            <img
-              src="img/desain web 7.png"
-              style="width: 100%"
-            />
+            <img src="img/desain web 4.png" style="width: 100%" />
+            <img src="img/desain web 5.png" style="width: 100%" />
+            <img src="img/desain web 6.png" style="width: 100%" />
+            <img src="img/desain web 7.png" style="width: 100%" />
           </div>
-          <!-- End photo grid -->
         </div>
-        <!-- End Portfolio Section -->
       </div>
 
-      <!-- Contact Section -->
       <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
         <h2 class="w3-text-light-grey">Contact Me</h2>
         <hr style="width: 200px" class="w3-opacity" />
-
         <div class="w3-section">
           <p>
             <i
@@ -307,13 +290,10 @@
           <p>
             <i
               class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"
-            >
-            </i>
+            ></i>
             Email: yudamsiren19@gmail.com
           </p>
         </div>
-        <br />
-        <p>Let's get in touch. Send me a message:</p>
 
         <form action="/action_page.php" target="_blank">
           <p>
@@ -361,10 +341,8 @@
             </button>
           </p>
         </form>
-        <!-- End Contact Section -->
       </div>
 
-      <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
       <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -373,19 +351,9 @@
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
         <p class="w3-small">
-          This website was created by Kajal with the help of W3Schools.
+          This website was created by Yehuda Msiren with the help of W3Schools.
         </p>
-
-        <a
-          class="w3-button w3-round-xxlarge w3-small w3-light-grey"
-          href="#me"
-          target="_blank"
-          >KASUMASA</a
-        >
-        <!-- End footer -->
       </footer>
-
-      <!-- END PAGE CONTENT -->
     </div>
   </body>
 </html>
